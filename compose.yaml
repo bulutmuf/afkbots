@@ -1,0 +1,22 @@
+services:
+  zenitmc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: zenitmc-afk-manager:local
+    container_name: zenitmc-afk-manager
+    restart: unless-stopped
+    init: true
+    stdin_open: true
+    tty: true
+    command: ["node", "manager.js", "dev", "--bots", "${BOT_COUNT:-35}"]
+    environment:
+      LOG_PROFILE: "${LOG_PROFILE:-quiet}"
+      MC_HOST: "${MC_HOST:-play.zenitmc.com}"
+      MC_PORT: "${MC_PORT:-25565}"
+      ZENIT_DATABASE_PATH: /app/data/zenitmc.sqlite
+    volumes:
+      - type: bind
+        source: ./data
+        target: /app/data
+    stop_grace_period: 20s

@@ -1,0 +1,11 @@
+node_modules
+backups
+test
+data
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.zip
+.git
+.env
+npm-debug.log*

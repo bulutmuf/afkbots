@@ -1,0 +1,21 @@
+{
+  "name": "zenitmc-afk-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-session Minecraft 1.21.11 AFK operator and gems transfer manager.",
+  "main": "manager.js",
+  "scripts": {
+    "start": "node manager.js",
+    "dev": "node manager.js dev",
+    "test": "node --test",
+    "check": "node --check manager.js && node --check bot.js && node --check src/afk-reward.js && node --check src/database.js && node --check src/log-policy.js && node --check src/logger.js && node --check src/operator-console.js && node --check src/username-generator.js && node --check src/bot-manager.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "minecraft-protocol": "^1.66.2",
+    "mineflayer": "^4.37.1"
+  }
+}

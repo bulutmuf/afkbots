@@ -1,0 +1,16 @@
+node_modules/
+runtime/
+data/
+backups/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.db
+.env
+*.log
+*.zip
+*.tar.gz
+npm-debug.log*
+.DS_Store
+Thumbs.db

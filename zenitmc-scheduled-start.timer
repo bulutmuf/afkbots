@@ -1,0 +1,12 @@
+[Unit]
+Description=Schedule ZenitMC for 08:30 Europe/Istanbul on 2026-08-24
+
+[Timer]
+OnCalendar=2026-08-24 08:30:00 Europe/Istanbul
+AccuracySec=1s
+RandomizedDelaySec=0
+Persistent=true
+Unit=zenitmc-scheduled-start.service
+
+[Install]
+WantedBy=timers.target
